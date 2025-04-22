@@ -1,8 +1,22 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { CheckCircle, Phone, Mail, Quote } from "lucide-react";
+// Veteran Roots Lawncare - React Website (Ready for GitHub + Vercel)
 
-export default function VeteranLawncareHome() {
+import React from "react";
+
+const Card = ({ children, className }) => (
+  <div className={`bg-white rounded-xl shadow p-4 ${className}`}>{children}</div>
+);
+
+const CardContent = ({ children, className }) => (
+  <div className={className}>{children}</div>
+);
+
+const Button = ({ children, className, ...props }) => (
+  <button className={`bg-green-700 text-white py-2 px-4 rounded-lg hover:bg-green-800 ${className}`} {...props}>
+    {children}
+  </button>
+);
+
+export default function App() {
   return (
     <div className="min-h-screen bg-green-50 p-6">
       <header className="text-center mb-10">
@@ -11,7 +25,7 @@ export default function VeteranLawncareHome() {
       </header>
 
       <section className="grid md:grid-cols-2 gap-6 mb-12">
-        <Card className="shadow-xl">
+        <Card>
           <CardContent className="p-6">
             <h2 className="text-2xl font-semibold text-green-900 mb-2">Our Mission</h2>
             <p className="text-green-800">
@@ -20,15 +34,15 @@ export default function VeteranLawncareHome() {
           </CardContent>
         </Card>
 
-        <Card className="shadow-xl">
+        <Card>
           <CardContent className="p-6">
             <h2 className="text-2xl font-semibold text-green-900 mb-2">Services</h2>
             <ul className="space-y-2 text-green-800">
-              <li><CheckCircle className="inline-block mr-2 text-green-600" />Lawn Mowing & Edging</li>
-              <li><CheckCircle className="inline-block mr-2 text-green-600" />Seasonal Cleanups</li>
-              <li><CheckCircle className="inline-block mr-2 text-green-600" />Mulching & Planting</li>
-              <li><CheckCircle className="inline-block mr-2 text-green-600" />Fertilization Plans</li>
-              <li><CheckCircle className="inline-block mr-2 text-green-600" />Veteran & Senior Discounts</li>
+              <li>✅ Lawn Mowing & Edging</li>
+              <li>✅ Seasonal Cleanups</li>
+              <li>✅ Mulching & Planting</li>
+              <li>✅ Fertilization Plans</li>
+              <li>✅ Veteran & Senior Discounts</li>
             </ul>
           </CardContent>
         </Card>
@@ -47,24 +61,9 @@ export default function VeteranLawncareHome() {
       <section className="mb-12">
         <h2 className="text-2xl font-bold text-green-900 mb-6 text-center">What Our Clients Say</h2>
         <div className="grid md:grid-cols-3 gap-6">
-          <Card className="shadow-md">
+          <Card>
             <CardContent className="p-4">
-              <Quote className="text-green-700 mb-2" />
-              <p className="text-green-800 italic">“Top-tier service and super respectful team. My yard has never looked better!”</p>
+              <span className="text-green-700 text-2xl mb-2 block">“</span>
+              <p className="text-green-800 italic">Top-tier service and super respectful team. My yard has never looked better!</p>
               <p className="text-green-700 mt-2 font-semibold">– Michelle R.</p>
             </CardContent>
-          </Card>
-
-          <Card className="shadow-md">
-            <CardContent className="p-4">
-              <Quote className="text-green-700 mb-2" />
-              <p className="text-green-800 italic">“You can tell they care. Always on time, always professional.”</p>
-              <p className="text-green-700 mt-2 font-semibold">– James K.</p>
-            </CardContent>
-          </Card>
-
-          <Card className="shadow-md">
-            <CardContent className="p-4">
-              <Quote className="text-green-700 mb-2" />
-              <p className="text-green-800 italic">“Hiring a veteran was a no-brainer—and these guys delivered!”</p>
-              <p className="text-green-700 mt-2 font-semibold">– Clara T.</p>
