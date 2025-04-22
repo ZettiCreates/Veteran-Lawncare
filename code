@@ -1,0 +1,70 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { CheckCircle, Phone, Mail, Quote } from "lucide-react";
+
+export default function VeteranLawncareHome() {
+  return (
+    <div className="min-h-screen bg-green-50 p-6">
+      <header className="text-center mb-10">
+        <h1 className="text-4xl font-bold text-green-800">Veteran Roots Lawncare</h1>
+        <p className="text-lg text-green-700 mt-2">Proudly Veteran-Owned & Operated</p>
+      </header>
+
+      <section className="grid md:grid-cols-2 gap-6 mb-12">
+        <Card className="shadow-xl">
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-semibold text-green-900 mb-2">Our Mission</h2>
+            <p className="text-green-800">
+              At Veteran Roots, we bring military precision to your lawn. Our mission is to serve our community with integrity, discipline, and hard work—values we carried in uniform.
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card className="shadow-xl">
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-semibold text-green-900 mb-2">Services</h2>
+            <ul className="space-y-2 text-green-800">
+              <li><CheckCircle className="inline-block mr-2 text-green-600" />Lawn Mowing & Edging</li>
+              <li><CheckCircle className="inline-block mr-2 text-green-600" />Seasonal Cleanups</li>
+              <li><CheckCircle className="inline-block mr-2 text-green-600" />Mulching & Planting</li>
+              <li><CheckCircle className="inline-block mr-2 text-green-600" />Fertilization Plans</li>
+              <li><CheckCircle className="inline-block mr-2 text-green-600" />Veteran & Senior Discounts</li>
+            </ul>
+          </CardContent>
+        </Card>
+      </section>
+
+      <section className="bg-green-100 p-6 rounded-2xl shadow-md mb-10">
+        <h2 className="text-2xl font-bold text-green-900 mb-4">Why Choose Us?</h2>
+        <p className="text-green-800 mb-2">
+          We treat your yard like it's our own—because that's the standard we live by. When you hire a veteran, you hire commitment, reliability, and excellence.
+        </p>
+        <p className="text-green-800">
+          Our team is prompt, professional, and passionate about quality service. Whether you're looking for routine maintenance or a full backyard transformation, we’ve got your six.
+        </p>
+      </section>
+
+      <section className="mb-12">
+        <h2 className="text-2xl font-bold text-green-900 mb-6 text-center">What Our Clients Say</h2>
+        <div className="grid md:grid-cols-3 gap-6">
+          <Card className="shadow-md">
+            <CardContent className="p-4">
+              <Quote className="text-green-700 mb-2" />
+              <p className="text-green-800 italic">“Top-tier service and super respectful team. My yard has never looked better!”</p>
+              <p className="text-green-700 mt-2 font-semibold">– Michelle R.</p>
+            </CardContent>
+          </Card>
+
+          <Card className="shadow-md">
+            <CardContent className="p-4">
+              <Quote className="text-green-700 mb-2" />
+              <p className="text-green-800 italic">“You can tell they care. Always on time, always professional.”</p>
+              <p className="text-green-700 mt-2 font-semibold">– James K.</p>
+            </CardContent>
+          </Card>
+
+          <Card className="shadow-md">
+            <CardContent className="p-4">
+              <Quote className="text-green-700 mb-2" />
+              <p className="text-green-800 italic">“Hiring a veteran was a no-brainer—and these guys delivered!”</p>
+              <p className="text-green-700 mt-2 font-semibold">– Clara T.</p>
